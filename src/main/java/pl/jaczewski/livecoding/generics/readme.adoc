@@ -1,0 +1,81 @@
+= Tasks
+
+== Generify this
+
+[source, java]
+----
+// 1
+
+List list = new ArrayList();
+list.add("hello");
+String s = (String) list.get(0);
+
+// 2
+
+class Box {
+    private Object object;
+
+    void set(Object object) { this.object = object; }
+    Object get() { return object; }
+}
+
+// 3
+
+class Pair {
+    private Object first;
+    private Object second;
+
+    void set(Object o1, Object o2) {
+        this.first = o1;
+        this.second = o2;
+    }
+
+    Object getFirst() { return first; }
+    Object getSecond() { return second; }
+}
+----
+
+== Code a generic method
+
+[source, java]
+----
+// printMe method for arrays of Integers, Characters, People and Grades
+//      People - plural for Person, has a list of Person inside
+//      Grades - plural for Grade, has a list of Grade inside
+//      Person - has a name, surname, dateOfBirth (of type LocaDate), unique ID and perhaps methods that every object has
+//      Grade - has a title, dateOfIssuance (of type LocaDate), unique ID and perhaps methods that every object has
+//      overloading is NOT allowed, remember! Only! One! Method! Enhanced for loop is welcome.
+
+
+// max method for three arguments of same type
+//      types can be Strings, Characters, Integers, People, Grades
+//      so "apples", "booze", "cheddar"
+//      'k', 'v', 'e'
+//      5, -13, 0
+//      new Person(...), new Person(...), new Person(...)
+//      new Grade(...), new Grade(...), new Grade(...)
+//      
+//      Method MUST use generic type tied to the Comparable interface as a return type.
+
+
+// mapCreator method for two arguments of a DIFFERENT type
+//      method returns a map with first type being key type and second being value type
+//      returned map should be a singleton map - a map with one pair
+----
+
+== Explain terms
+
+Fill in the blanks please, in the terms.adoc file
+
+== Demonstrate
+
+For each point here, demonstrate it in a separate class:
+
+. Cannot Instantiate Generic Types with Primitive Types
+. Cannot Create Instances of Type Parameters
+. Cannot Declare Static Fields Whose Types are Type Parameters
+. Cannot Use Casts or instanceof With Parameterized Types
+. Cannot Create Arrays of Parameterized Types
+. Cannot Create, Catch, or Throw Objects of Parameterized Types
+. Cannot Overload a Method Where the Formal Parameter Types of Each Overload Erase to the Same Raw Type
+
